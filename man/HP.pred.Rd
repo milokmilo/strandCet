@@ -4,12 +4,14 @@
 \alias{HP.pred}
 \title{Prediction of Heligman-Pollard model.}
 \usage{
-HP.pred(life, HPout, age = seq(0, 29, 0.1), rm = 0)
+HP.pred(life, HPout, M = "med", age = seq(0, 29, 0.1), rm = 0)
 }
 \arguments{
 \item{life}{A life table created with \link{life.tab} or a dataframe with a vector of ages in the first column.}
 
 \item{HPout}{A model object created with \link{HP.mod} with the Heligman-Pollard estimated params.}
+
+\item{M}{Defines the statistic to predict. Median by default (med), Low CI (low) or High CI (high)}
 
 \item{age}{A vector containing the ages at which each age interval begins. See Details}
 
