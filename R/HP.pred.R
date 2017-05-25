@@ -6,6 +6,7 @@
 #'
 #' @param life A life table created with \link{life.tab} or a dataframe with a vector of ages in the first column.
 #' @param HPout A model object created with \link{HP.mod} with the Heligman-Pollard estimated params.
+#' @param M Defines the statistic to predict. Median by default (med), Low CI (low) or High CI (high)
 #' @param age A vector containing the ages at which each age interval begins. See Details
 #' @param rm The number of age classes that want to be removed from optimization.
 #'
@@ -33,16 +34,40 @@
 #'
 #' @export
 
-HP.pred <- function(life, HPout, age = seq(0,29,0.1), rm = 0){
-        A <- HPout$out[1,2]
-        B <- HPout$out[2,2]
-        C <- HPout$out[3,2]
-        D2 <- HPout$out[4,2]
-        D <- HPout$out[5,2]
-        E <- HPout$out[6,2]
-        F <- HPout$out[7,2]
-        G <- HPout$out[8,2]
-        H <- HPout$out[9,2]
+HP.pred <- function(life, HPout, M = "med", age = seq(0,29,0.1), rm = 0){
+        if(M == "med"){
+                A <- HPout$out[1, 2]
+                B <- HPout$out[2, 2]
+                C <- HPout$out[3, 2]
+                D2 <- HPout$out[4, 2]
+                D <- HPout$out[5, 2]
+                E <- HPout$out[6, 2]
+                F <- HPout$out[7, 2]
+                G <- HPout$out[8, 2]
+                H <- HPout$out[9, 2]
+                }
+        if(M == "high"){
+                A <- HPout$out[1, 3]
+                B <- HPout$out[2, 3]
+                C <- HPout$out[3, 3]
+                D2 <- HPout$out[4, 3]
+                D <- HPout$out[5, 3]
+                E <- HPout$out[6, 3]
+                F <- HPout$out[7, 3]
+                G <- HPout$out[8, 3]
+                H <- HPout$out[9, 3]
+                }
+        if(M == "low"){
+                A <- HPout$out[1, 1]
+                B <- HPout$out[2, 1]
+                C <- HPout$out[3, 1]
+                D2 <- HPout$out[4, 1]
+                D <- HPout$out[5, 1]
+                E <- HPout$out[6, 1]
+                F <- HPout$out[7, 1]
+                G <- HPout$out[8, 1]
+                H <- HPout$out[9, 1]
+                }
         age <- age
         Myoung <- A^(((age) + B)^C)
         Mrisk <- D2 + D * exp(-E * (log(age) - log(F))^2)
