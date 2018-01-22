@@ -27,6 +27,10 @@
 #'
 #' @keywords life-table
 #'
+#' @examples
+#'
+#' life.tab(cetaceans)
+#'
 #' @export
 
 life.tab <- function(x, n = 1000){

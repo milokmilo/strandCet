@@ -28,15 +28,15 @@ samp.postopt(opt.cov.d, opt.mu.d, d.keep, prior, B = 400, B0 = 8000,
 \item{B1}{The number of new samples - should be equal to B * d.keep.}
 }
 \description{
-Samples the eight Heligman-Pollard parameters from the mvnorm distribution for each run of optimizer step where the likelihood for that run exceeds the maximum likelihood from the prior.
+Samples the nine Heligman-Pollard parameters from the mvnorm distribution for each run of optimizer step where the likelihood for that run exceeds the maximum likelihood from the prior.
 }
 \note{
 For use within the function \link{HP.mod}.
 }
 \references{
-Heligman, L. and Pollard, J.H. (1980) The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49–80.
+Heligman, L. and Pollard, J.H. (1980) The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49-80.
 
-Poole, D and Raftery, A. (2000). Inference for Deterministic Simulation Models: The Bayesian Melding Approach. Journal of the American Statistical Association 95:1244–1255.
+Poole, D and Raftery, A. (2000). Inference for Deterministic Simulation Models: The Bayesian Melding Approach. Journal of the American Statistical Association 95:1244-1255.
 
 Raftery, A and Bao, L. (2009). "Estimating and Projecting Trends in HIV/AIDS Generalized Epidemics Using Incremental Mixture Importance Sampling." Technical Report 560, Department of Statistics, University of Washington.
 

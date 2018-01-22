@@ -51,6 +51,7 @@ Performs the final re-sampling step in the Bayesian Melding with IMIS procedure 
 }
 \note{
 The function \link{HP.mod} performs this along with all other steps in a single function.
+The algorithm ends when the expected fraction of unique points in the resample is at least 1 ??? 1/e = 0.632
 }
 \references{
 Heligman, L. and Pollard, J.H. (1980) The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49–80.

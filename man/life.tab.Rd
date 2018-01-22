@@ -29,6 +29,11 @@ Performs a regular life table from a dataframe with ages and number of death ind
 \details{
 Constructs a cohort life table from a dataframe with age classes and enumerated deaths.
 }
+\examples{
+
+life.tab(cetaceans)
+
+}
 \references{
 Preston, S.H., Heuveline, P. and Guillot, F. (2001). Demography: Measuring and modeling population processes. Oxford: Blackwell.
 }

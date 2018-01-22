@@ -251,7 +251,7 @@ loop.optim <- function (prior, nrisk, ndeath, age, d = 10,
 #' Multivariate Gaussian Sampling for Heligman-Pollard model estimated via Bayesian Melding.
 #'
 #' @description
-#' Samples the eight Heligman-Pollard parameters from the mvnorm distribution for each run of optimizer step where the likelihood for that run exceeds the maximum likelihood from the prior.
+#' Samples the nine Heligman-Pollard parameters from the mvnorm distribution for each run of optimizer step where the likelihood for that run exceeds the maximum likelihood from the prior.
 #'
 #' @param opt.cov.d An array containing a covariance matrix for each run of optimizer where the likelihood for that run exceeds the maximum likelihood from the prior.
 #' @param opt.mu.d A matrix containing the results of the optimizer step.
@@ -271,9 +271,9 @@ loop.optim <- function (prior, nrisk, ndeath, age, d = 10,
 #'
 #' @references
 #'
-#' Heligman, L. and Pollard, J.H. (1980) The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49–80.
+#' Heligman, L. and Pollard, J.H. (1980) The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49-80.
 #'
-#' Poole, D and Raftery, A. (2000). Inference for Deterministic Simulation Models: The Bayesian Melding Approach. Journal of the American Statistical Association 95:1244–1255.
+#' Poole, D and Raftery, A. (2000). Inference for Deterministic Simulation Models: The Bayesian Melding Approach. Journal of the American Statistical Association 95:1244-1255.
 #'
 #' Raftery, A and Bao, L. (2009). "Estimating and Projecting Trends in HIV/AIDS Generalized Epidemics Using Incremental Mixture Importance Sampling." Technical Report 560, Department of Statistics, University of Washington.
 #'
@@ -548,6 +548,7 @@ expt.upts <- function(w, m) {
 #'
 #' @note
 #' The function \link{HP.mod} performs this along with all other steps in a single function.
+#' The algorithm ends when the expected fraction of unique points in the resample is at least 1 ??? 1/e = 0.632
 #'
 #' @return
 #' \item{H.new}{A (B * theta.dim) matrix containing the posterior distribution for each parameter.}

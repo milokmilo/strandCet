@@ -1,10 +1,10 @@
 Package: strandCet
 Type: Package
-Title: Estimation of biological parameters from stranded cetaceans
-Version: 0.1.0
+Title: Estimation of Biological Parameters from Stranded Cetaceans
+Version: 1.0
 Author: Camilo Saavedra <camilo.saavedra.penas@gmail.com>
 Maintainer: Camilo Saavedra <camilo.saavedra.penas@gmail.com>
-Description: Analysis of biological data from stranded marine mammals: mortality-at-age, survivorship, creation of life tables, leslie matrices, etc.
+Description: Analysis of biological data from stranded marine mammals: mortality-at-age, life tables, Leslie matrices, etc.
 Depends: R (>= 3.2.5)
 Imports: numDeriv, corpcor, MASS, mvtnorm, boot, minpack.lm, stats
 License: GPL (>=2)

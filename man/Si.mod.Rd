@@ -27,6 +27,12 @@ The data used must be a data frame whose first column is a vector of the estimat
 
 All age classes are used for adjustment, in case of whish to remove any of the first age classes due to bias in the sample, indicate it with the parameter "rm" and these will be removed starting from the first age class.
 }
+\examples{
+
+Si.mod(data = cetaceans, rm = 2,
+       par = c(0.3159462,  0.1860541, -1.2802880,  1.1733226,  0.0170314))
+
+}
 \references{
 Siler, W. (1979). A Competing-Risk Model for Animal Mortality. Ecology 60, 750–757.
 
