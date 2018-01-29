@@ -22,6 +22,16 @@ parameters drawn from a uniform distribution.
 Draws from a uniform distribution with bounds "pri.lo" and "pri.hi" to create the prior distribution
 of the Heligman-Pollard parameters necessary for the Bayesian Melding procedure.
 }
+\examples{
+
+priors <- data.frame(priors.lo = c(0,0.5,0,0,0,0,6,0,1),
+                     priors.hi = c(0.1,1,1,0.15,0.15,50,10,0.01,1.5))
+
+HP.priors(pri.lo = priors$priors.lo,
+          pri.hi = priors$priors.hi,
+          theta.dim = 9)
+
+}
 \references{
 Heligman, L. and Pollard, J.H. (1980). The Age Pattern of Mortality. Journal of the Institute of Actuaries 107:49–80.
 

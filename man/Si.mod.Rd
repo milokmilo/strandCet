@@ -32,6 +32,12 @@ All age classes are used for adjustment, in case of whish to remove any of the f
 Si.mod(data = cetaceans, rm = 2,
        par = c(0.3159462,  0.1860541, -1.2802880,  1.1733226,  0.0170314))
 
+Si.mod(data = cetaceans, rm = 1,
+       par = c(0.3159462,  0.1860541, -1.2802880,  1.1733226,  0.0170314))
+
+Si.mod(data = cetaceans, rm = 0,
+       par = c(0.3159462,  0.1860541, -1.2802880,  1.1733226,  0.0170314))
+
 }
 \references{
 Siler, W. (1979). A Competing-Risk Model for Animal Mortality. Ecology 60, 750–757.

@@ -21,6 +21,14 @@ The data used must be the data frame from which the Siler's patameters were esti
 
 In case that any age class had been removed for the estimation of the parameters that are going to be used for predicting the model, indicate it with the parameter "rm" and these age classes will be removed starting from the first age class.
 }
+\examples{
+
+modSi <- Si.mod(data = cetaceans, rm = 2,
+                par = c(0.3159462,  0.1860541, -1.2802880,  1.1733226,  0.0170314))
+
+Si.pred(data = cetaceans, Sout = modSi, rm = 2)
+
+}
 \references{
 Siler, W. (1979). A Competing-Risk Model for Animal Mortality. Ecology 60, 750–757.
 
