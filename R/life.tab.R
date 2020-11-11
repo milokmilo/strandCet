@@ -43,7 +43,7 @@ life.tab <- function(x, n = 1000){
         ## Sx - Creating survivorship column
         d <- sum(life$Mx) # sum of deaths
         for (j in 1:nrow(life)){
-                life$Sx[[j]] <- d-sum(life$Mx[1:j-1])}
+                life$Sx[j] <- d-sum(life$Mx[1:j-1])}
 
         ## nx - Standardizing survivors [(N/SumM) * 1000]
         life$nx <- (life$Sx/d)*n
